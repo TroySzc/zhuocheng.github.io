@@ -23,18 +23,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<article>
 				<header class="mb-16 md:mb-24 text-center">
 					{heroImage && (
-						<div class="w-full mb-12 overflow-hidden bg-gray-50">
+						<div class="w-full mb-16 overflow-hidden bg-gray-50 rounded-[2.5rem] transform-gpu">
 							<Image 
 								width={1020} 
 								height={510} 
 								src={heroImage} 
 								alt={title} 
-								class="w-full h-auto object-cover max-h-[60vh]" 
+								class="w-full h-auto object-cover max-h-[65vh]" 
 							/>
 						</div>
 					)}
 					<div class="mx-auto max-w-[65ch]">
-						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 text-black leading-[1.1]">
+						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 text-black leading-[1.1]">
 							{title}
 						</h1>
 						

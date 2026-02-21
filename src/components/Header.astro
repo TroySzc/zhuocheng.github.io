@@ -4,19 +4,19 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="py-6 px-6 md:px-12 w-full max-w-[1200px] mx-auto bg-white flex items-center justify-between z-10 sticky top-0 bg-opacity-90 backdrop-blur-sm">
-	<nav class="w-full flex items-center justify-between">
-		<h2 class="text-xl font-bold tracking-tight text-black m-0">
+	<nav class="w-full flex items-center gap-10 md:gap-16">
+		<h2 class="text-xl font-bold tracking-tight text-black m-0 shrink-0">
 			<a href="/" class="text-black no-underline hover:text-gray-600 transition-colors">
 				{SITE_TITLE}
 			</a>
 		</h2>
 		
-		<div class="flex items-center gap-6 md:gap-8">
+		<div class="flex items-center gap-6 md:gap-8 flex-1">
 			<div class="internal-links flex gap-6 text-sm font-medium">
 				<HeaderLink href="/" class="text-black no-underline border-b-2 border-transparent hover:border-black transition-colors pb-1 data-[active=true]:border-black">Home</HeaderLink>
 			</div>
 			
-			<div class="social-links flex items-center gap-4">
+			<div class="social-links flex items-center gap-4 ml-auto">
 				<a href="https://www.xiaohongshu.com/user/profile/your-profile-id" target="_blank" rel="noopener noreferrer" class="text-black hover:text-red-500 transition-colors" title="Follow me on Xiaohongshu">
 					<span class="sr-only">小红书 Xiaohongshu</span>
 					<!-- Xiaohongshu SVG Icon -->

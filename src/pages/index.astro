@@ -20,34 +20,39 @@ const posts = (await getCollection('blog')).sort(
 	<body class="bg-white text-[#111] antialiased selection:bg-black selection:text-white flex flex-col min-h-screen">
 		<Header />
 		
-		<main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
-			<div class="mb-20">
-				<h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-black">日常碎碎念</h1>
-				<p class="text-xl md:text-2xl text-gray-500 font-light">极简主义与抽象画廊的碰撞。</p>
+		<main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20">
+			<!-- Hero Section -->
+			<div class="mb-24 md:mb-32 mt-8 md:mt-16 flex flex-col items-center text-center">
+				<h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-black leading-[1.1]">
+					日常碎碎念
+				</h1>
+				<p class="text-lg md:text-xl text-gray-500 font-light max-w-2xl">
+					极简主义与抽象画廊的碰撞。
+				</p>
 			</div>
 
 			<section>
-				<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+				<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
 					{
 						posts.map((post) => (
 							<li class="group cursor-pointer">
 								<a href={`/blog/${post.id}/`} class="block no-underline">
 									{post.data.heroImage && (
-										<div class="w-full aspect-[4/3] mb-6 overflow-hidden bg-gray-50">
+										<div class="w-full aspect-[4/3] mb-8 overflow-hidden bg-gray-50 rounded-[2rem] transform-gpu">
 											<Image 
 												width={800} 
 												height={600} 
 												src={post.data.heroImage} 
 												alt={post.data.title}
-												class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter group-hover:contrast-125"
+												class="w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105 filter group-hover:contrast-110"
 											/>
 										</div>
 									)}
-									<div class="flex flex-col gap-2">
-										<h4 class="text-2xl font-bold tracking-tight text-black leading-[1.2] group-hover:text-gray-600 transition-colors">
+									<div class="flex flex-col gap-3 px-2">
+										<h4 class="text-xl md:text-2xl font-bold tracking-tight text-black leading-[1.3] group-hover:text-gray-500 transition-colors">
 											{post.data.title}
 										</h4>
-										<p class="text-sm text-gray-500 font-mono">
+										<p class="text-sm text-gray-400 font-mono">
 											<FormattedDate date={post.data.pubDate} />
 										</p>
 									</div>
