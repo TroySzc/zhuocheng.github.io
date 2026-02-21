@@ -40,6 +40,6 @@
     @apply mt-12 mb-6;
   }
   .prose img {
-    @apply rounded-2xl; /* Rounded corners for minimalist, soft touch */
+    @apply rounded-none; /* Keep it sharp and minimalistic */
   }
 }
