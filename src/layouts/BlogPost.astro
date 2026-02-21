@@ -33,7 +33,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							/>
 						</div>
 					)}
-					<div class="mx-auto max-w-[65ch] text-left">
+					<div class="max-w-[65ch] text-left">
 						<h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-[#111] leading-[1.2]">
 							{title}
 						</h1>
@@ -49,7 +49,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					</div>
 				</header>
 
-				<div class="prose prose-lg prose-neutral max-w-[65ch] mx-auto prose-p:leading-[1.8] prose-p:text-[#111] prose-headings:text-black prose-headings:tracking-tight prose-a:text-black prose-a:decoration-1 hover:prose-a:decoration-2">
+				<div class="prose prose-lg prose-neutral max-w-[65ch] prose-p:leading-[1.8] prose-p:text-[#111] prose-headings:text-black prose-headings:tracking-tight prose-a:text-black prose-a:decoration-1 hover:prose-a:decoration-2">
 					<slot />
 				</div>
 			</article>
